@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{tabularx}
+
+\begin{document}
+
+\section*{Задачи}
+
+\subsection*{Лесни}
+\subsubsection*{Задача 1.1}
+Задача 1 от упражнението за релации.
+\subsubsection*{Задача 1.2}
+Задача 2 от упражнението за релации.
+\subsubsection*{Задача 1.3}
+Задача 12 от упражнението за релации.
+\subsubsection*{Задача 1.4}
+Задача 5 от упражнението за релации.
+\paragraph*{}
+Дадено е крайно непразно множество $A$ и релация $R \subseteq 2^A \times 2^A$, дефинирана така:
+$\forall (X, Y) \in 2^A \times 2^A: (X, Y) \in R \iff |X| \leq |Y|$
+\subsubsection*{Задача 1.5 - първо домашно КН 2021}
+Нека $R$ е релация над $\mathbb{N}^+ \times \mathbb{N}^+$ и $(a, b)R(c, d) \iff ad=bc$. Да се докаже, че $R$ е релация на еквивалентност.
+\subsubsection*{Задача 1.5}
+Нека $R$ е релация над $2^\mathbb{N}$ и $(X, Y) \in R \iff X \setminus Y = \emptyset$. Да се изследва за изучените свойства на релациите.
+\subsubsection*{Задача 1.6 - Записки на Ангел Димитриев}
+Нека $R$ е релация над $\mathbb{Z}$ и $aRb \iff (a-b)$ се дели на три.
+\begin{itemize}
+    \item Да се провери дали $R$ е релация на еквивалентност.
+    \item Да се намерят класовете на еквивалентност.
+\end{itemize}
+\subsection*{Задача 1.7}
+Нека $R$ е релация над $\mathbb{R}$ и 
+\begin{equation*}
+    xRy \iff x^6 + e^{5x - 8} + \frac{1}{1+e^{-x}} + sin(2x + 3) = y^6 + sin(2y + 3) + \frac{1}{1+e^{-y}} + e^{5y - 8}
+\end{equation*}
+Да се докаже, че $R$ е релация на еквивалентност.
+
+\subsubsection*{Задача 1.8 - Записки на Ангел Димитриев}
+Нека $R$ е релация над $\mathbb{N}^+$ и $(a, b) \in R \iff \exists q \in \mathbb{Q}: q^2 = \frac{a}{b}$
+\begin{itemize}
+    \item Да се докаже, че $R$ е релация на еквивалентност
+    \item Да се намерят класовете на еквивалентност
+\end{itemize}
+
+\subsubsection*{Задача 1.9 - Записки на Ангел Димитриев}
+Нека $R$ е релация над $S = \{ 0, 1, 2, ..., 32 \}$ и 
+\begin{equation*}
+    aRb \iff b - a \equiv 0 (mod 3) \land a - b \geq 0.
+\end{equation*}
+
+\begin{itemize}
+    \item Да се докаже, че $R$ е релация на частична наредба
+    \item Да се намерят минималните и максималните елементи
+\end{itemize}
+
+\subsubsection*{Задача 1.10 - Kenneth H. Rosen}
+Нека $R_1, R_2 \in A \times A$ са релации на еквивалентност. Кои от следните конфигурации са със сигурност релации на еквивалентност?
+\begin{itemize}
+    \item $R_1 \cup R_2$
+    \item $R_1 \cap R_2$
+    \item $R_1 \oplus R_2$
+\end{itemize}
+
+\subsubsection*{Задача 1.11 - Kenneth H. Rosen}
+Покажете кои са релациите на еквивалентност над множеството $A = \{ 1, 2, 3, 4 \}$
+
+\subsubsection*{Задача 1.12 - Kenneth H. Rosen}
+Дайте пример за частична наредба $R \subseteq A \times A$, за която:
+\begin{itemize}
+    \item Има минимален елемент, но няма максимален
+    \item Има максимален елемент, но няма минимален
+    \item Няма нито минимален, нито максимален елемент
+\end{itemize}
+
+\subsubsection*{Задача 1.13 - Kenneth H. Rosen}
+Нека $R$ е релация над $\mathbb{Z}^+ \times \mathbb{Z}^+$ и 
+\begin{equation*}
+    ((a, b), (c, d)) \in R \iff a + d = b + c
+\end{equation*}
+\begin{itemize}
+    \item Да се докаже, че $R$ е релация на еквивалентност
+    \item Да се намерят класовете на еквивалентност
+\end{itemize} 
+
+\subsubsection*{Задача 1.14 - Kenneth H. Rosen}
+Релация $R \subseteq A \times A$ се нарича циркулярна, ако $\forall a, b, c \in A(aRb \land bRc \implies cRa)$. 
+Докажете, че $R$ е циркулярна и рефлексивна тогава и само тогава, когато е релация на еквивалентност.
+
+\subsection*{По-забавни}
+\subsubsection*{Задача 2.1 - Записки на Ангел Димитриев}
+Нека $FinSubs(\mathbb{N})$ е множеството от всички крайни подмножества на $\mathbb{N}$. Нека $R$ e релация над $FinSubs(\mathbb{N})$ и  
+\begin{equation*}
+    (X, Y) \in R \iff \displaystyle\sum_{x \in X} x^2 - \displaystyle\sum_{y \in Y} y = 2t, t \in \mathbb{Z} 
+\end{equation*}
+\begin{itemize}
+    \item Да се докаже, че $R$ е релация на еквивалентност.
+    \item Да се намерят класовете на еквивалентност.
+\end{itemize}
+
+\subsubsection*{Дефиниция: композиция на релации}
+Нека $S \subseteq A \times B$ и $R \subseteq B \times C$ са релации. Тогава тяхната композиция $S \circ R = \{ (a, c) \in A \times C | \exists b \in B: (a, b) \in S \land (b, c) \in R \}$.
+
+\subsubsection*{Дефиниция: степенуване на релация}
+Нека $R \subseteq A \times A$ е релация. Дефинираме индуктивно понятието $R^n$:
+\begin{itemize}
+    \item $R^1 = R$
+    \item $R^{n+1} = R^n \circ R$
+\end{itemize}
+
+\subsubsection*{Задача 2.2.1 - Kenneth H. Rosen}
+Докажете, че операцията композиция е асоциативна. Тоест, докажете за прозволни релации $R_1 \subseteq A_1, \times A_2$, $R_2 \subseteq A_2, \times A_3$ и $R_3 \subseteq A_3, \times A_4$, че $R_1 \circ (R_2 \circ R_3) = (R_1 \circ R_2) \circ R_3$.
+
+\subsubsection*{Задача 2.2.2 - Kenneth H. Rosen}
+Докажете, че за произволна релация $R \subseteq A \times A$ е вярно, че $R^{n+1} = R \circ R^{n}$.
+
+\subsubsection*{Задача 2.2 - Kenneth H. Rosen}
+Докажете, че за произволна симетрична релация $R \subseteq A \times A$, $R^n$ също е симетрична за всяко $n \in \mathbb{N}^+$.
+
+\section*{Решения}
+
+\end{document}
