@@ -8,14 +8,86 @@
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{tabularx}
+\usepackage{enumitem}
 
 \begin{document}
+
+\section*{Дефиниции}
+\subsection*{Композиция на функции}
+Нека $f: A \rightarrow B$ и $g: B \rightarrow C$ са функции. Тогава $g \circ f: A \rightarrow C$ е функция и $(g \circ f)(x) = g(f(x))$.
+\subsection*{Обратна функция}
+Нека $f: A \rightarrow B$ e функция Тогава обратната ѝ функция $f^{-1} = \{ (y, x) | (x, y) \in f \}$, $f^{-1}: B \rightarrow A$.
 
 \section*{Задачи}
 
 \subsection*{Лесни}
+\subsubsection*{Задача 1.1 - Записки на Ангел Димитриев}
+Нека $f: \mathbb{R} \rightarrow \mathbb{R}$ и $g: \mathbb{R} \rightarrow \mathbb{R}$ са функции. 
+\begin{enumerate}[label=\Alph*)]
+    \item $g(x) = 2x + 1$, $(g \circ f)(x) = 2x - 1$, $f$ = ?
+    \item $f(x) = 3x - 1$, $(g \circ f)(x) = 6x + 5$, $g$ е линейна функция, $g$ = ?
+\end{enumerate}
+
+\subsection*{Задача 1.2}
+Проверете дали следните функции са сюрекции и дали са инекции. Всички функции са с доймейн и кодомейн $\mathbb{R}$.
+\begin{enumerate}[label=\Alph*)]
+    \item $f(x) = x$
+    \item $f(x) = -x$
+    \item $f(x) = 2x^6 - 8$
+    \item $f(x) = ln(x)$
+    \item $f(x) = x^3 - x^2$ (може да се докаже, че е сюрекция като се забележи, че $\displaystyle\lim_{x \rightarrow -\infty} f(x) = -\infty$ и $\displaystyle\lim_{x \rightarrow +\infty} f(x) = +\infty$ и че функцията е непрекъсната)
+    \item $f(x) = \begin{cases}
+        x & x \leq 0 \\
+        e^x - 1 & x > 0
+    \end{cases}$
+\end{enumerate}
+
+\subsection*{Задача 1.3 - Задачи за самоподготовка по Дискретни структури - 2021/2022 - Добромир Кралчев}
+Разглеждаме функциите $f: \mathbb{R} \rightarrow \mathbb{R}$ и $g: \mathbb{R} \rightarrow \mathbb{R}$
+\begin{itemize}
+    \item Покажете с пример, че $f \cup g$ може и да не е функция
+    \item Докажете, че $h = f \cap g$ е частична функция. Какво представлява дефиниционното множество на $h$? На колко е равно $h(x)$? Отговорете на тези въпроси в общия, а после - в частния случай $f(x) = x^3$ и $g(x) = |x^3|$. 
+\end{itemize}
+
+\subsubsection*{Задача 1.4 - Записки на Ангел Димитриев}
+Да се докаже, че $f: A \rightarrow B$ е биекция, тогава и само тогава, когато $f^{-1}$ е тотална функция.
+
+\subsubsection*{Задача 1.5 - семестриално контролно на КН 2021}
+Дадено е множество $A$ и функция $h: A \rightarrow A$, която е сюрекция. Докажете, че за всяка функция $f:A \rightarrow A$ и всяка функция $g:A \rightarrow A$ е вярно, че ако $f \circ h = g \circ h$, то $f = g$.
+
+\subsubsection*{Задача 1.6 - изпит-задачи на КН 2021}
+Нека $X$ и $Y$ са произволни множества. Нека $f: X \rightarrow Y$, $g: Y \rightarrow X$ и $i: Y \rightarrow Y$. Нека $\forall y \in Y: i(y) = y$. Нека $f \circ g = i$. Докажете или опровергайте, че $f$ е сюрекция.
+
+\subsubsection*{Задача 1.7 - Записки на Бойко Борисов}
+Функцията $f: \mathbb{N} \rightarrow \mathbb{N}$ удовлетворява равенството $f(f(f(n))) = n$ за всяко $n \in \mathbb{N}$. Следва ли, че $f$ е биекция?
+
+\subsubsection*{Задача 1.8 - Записки на Ангел Димитриев}
+\begin{enumerate}[label=\Alph*)]
+    \item Да се докаже, че следните две условия са еквивалентни:
+    \begin{itemize}
+        \item $(\forall f \in^{A} A)(\forall g \in^{A} A)(h \circ f = h \circ g \implies f = g)$
+        \item $h$ е инективна
+    \end{itemize}
+    \item Да се докаже, че следните две условия са еквивалентни:
+    \begin{itemize}
+        \item $(\forall f \in^{A} A)(\forall g \in^{A} A)(f \circ h = g \circ h \implies f = g)$
+        \item $h$ е сюрективна
+    \end{itemize}
+\end{enumerate}
+\textbf{Забележка:} С $h \in^{A} A$ означаваме, че $h$ е \textbf{тотална функция}, изобразяваща елементи на $А$ в елементи на $A$.
 
 \subsection*{По-забавни}
+\subsection*{Задача 2.1 - Домашна работа на КН 2021}
+Нека $S$ е крайно множество и $f: S \rightarrow S$ е биекция. С $f^n$ означаваме $(n-1)$-кратната композиция на $f$ със себе си. Индуктивната дефиниция е следната.
+\begin{itemize}
+    \item $f^1(x) = f(x)$
+    \item $f^n(x) = f(f^{n-1}(x))$
+\end{itemize}    
+
+\begin{enumerate}[label=\Alph*)]
+    \item Докажете, че $\exists n \in \mathbb{N}$, такава че $f^{-1} = f^n$, където $f^{-1}$ е обратната функция на $f$.
+    \item Дайте пример за биекция $g: \mathbb{N} \rightarrow \mathbb{N}$, за която предното твърдение не е вярно. 
+\end{enumerate}
 
 \section*{Решения}
 
