@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Дефиниции}
+
+\section*{Задачи}
+
+\subsection*{Лесни}
+\subsubsection*{Задача 1.1}
+Да се намери формула за редицата на фибоначи
+$f_n = \begin{cases}
+    0 & n = 0 \\
+    1 & n = 1 \\
+    f_{n-2} + f_{n-1} & n \geq 2 \\
+\end{cases}$
+\subsubsection*{Задача 1.2 - Добромир Кралчев, Александър Каракушев}
+Да се реши рекурентното уравнение:
+\begin{equation*}
+    T(1) = 1, T(n) = \frac{1}{\frac{1}{T(n-1)} + n^2}
+\end{equation*}
+\subsubsection*{Задача 1.3}
+Да се реши рекурентното уравнение: $ \\ $
+$a_1 = 1$ $ \\ $
+$a_n = a_{n-1} + n$ $ \\ $
+Какво пресмята това уравнение?
+
+\subsubsection*{Задача 1.4 - Kenneth H. Rosen}
+Да се реши рекурентното уравнение:
+\begin{equation*}
+    a_n = \begin{cases}
+        0 & n = 0 \\
+        4 & n = 1 \\
+        \frac{a_{n-2}}{4} & n \geq 2 \\
+    \end{cases}
+\end{equation*}
+\subsubsection*{Задача 1.5 - Kenneth H. Rosen}
+Да се реши рекурентното уравнение:
+\begin{equation*}
+    a_n = \begin{cases}
+        4 & n = 0 \\
+        10 & n = 1 \\
+        6a_{n-1} - 8a_{n-2}  & n \geq 2 \\
+    \end{cases}
+\end{equation*}
+
+\subsection*{Задача 1.6 - Kenneth H. Rosen}
+Да се реши рекурентното уравнение $a_0 = 2$, $a_n = 2a_{n-1} + 2^n$.
+\subsection*{Задача 1.6 - Kenneth H. Rosen}
+Да се реши рекурентното уравнение $a_0 = 4$, $a_n = 2a_{n-1} + n + 5$.
+\subsection*{Задача 1.7 - Kenneth H. Rosen}
+Да се реши рекурентното уравнение 
+
+\begin{equation*}
+    a_0 = 1, a_1 = 4, a_n = 4a_{n-1} - 3a_{n-2} + 2^n + n + 3.
+\end{equation*}
+
+\subsection*{По-забавни}
+\subsubsection*{Задача 2.1 - Добромир Кралчев}
+Да се докаже, че числото $(4 + \sqrt[]{7})^{2015} + (4 - \sqrt[]{7})^{2015}$ е цяло и да се намери цифрата на единиците му. 
+\subsubsection*{Задача 2.2 - Добромир Кралчев}
+Да се реши рекурентното уравнение $a_1 = 87, a_{n+1} = \frac{a_n - 1}{a_n}$.
+\subsubsection*{Задача 2.3 - семестриално контролно - КН - 2021}
+Разгледайте рекурентното уравнение
+\begin{equation*}
+    a_n = \begin{cases}
+        3, & \textup{ако } n = 0 \\
+        na_{n-1} - (n-1), & \textup{ако } n > 0 \\ 
+    \end{cases}
+\end{equation*}
+\begin{enumerate}
+    \item Обяснете защо това уравнение не може да се реши чрез изучавания на лекции метод с характеристичното уравнение.
+    \item Напишете стойностите на $n!$ за n = 0, 1, ..., 8.
+    \item Напишете стойностите на $a_n$ за n = 0, 1, ..., 8.
+    \item Открийте закономерност при стойностите на $a_n$. С други думи, отгатнете решение на рекурентното уравнение.
+    \item Докажете по индукция, че отгатнатото от Вас решение на рекурентното уравнение наистина е решение.
+\end{enumerate}
+\subsubsection*{Задача 2.5 - Добромир Кралчев - приложение на рекурентните уравнения}
+Колко $n$-цифрени цели положителни числа съдържат в десетичния си запис четен брой тройки (включително нито една)?
+\subsubsection*{Задача 2.6 - Добромир Кралчев - приложение на рекурентните уравнения}
+По колко начина числата 1, 2, 3, ..., $n$ могат да се наредят в редицата така, че всеки член (без първия) да се различава с единица от някое от числата вляво от него?
+
+
+\section*{Решения}
+
+\end{document}
