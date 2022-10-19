@@ -80,4 +80,29 @@ $$ \begin{cases}
 
 \section*{Решения}
 
+\subsection*{Задача 2.1}
+\paragraph*{}
+Задачата има много по-красиво и адекватно решение от представеното тук. То може да се намери заедно с контролното. Това тук е с демонстрационни цели.
+\paragraph*{}
+Трябва да определим еднозначно за всеки елемент $x$ от нашия свят дали е елемент на $X$ или не. Ще разбием този въпрос на $2^3 = 8$ случая според това дали $x$ принадлежи на някое от $A, B, C$
+\subsubsection*{Случай 0 - $x \not\in A, x \not\in B, x \not\in C$}
+Допускаме, че $x \in X$. Тогава $x \in C \cup X$, но $x \not\in (B \setminus A) \cup C$, което е в противоречие с първото уравнение от условието. Следователно $x \not\in X$. Следователно $X \subseteq (A \cup B \cup C)$. 
+\subsubsection*{Случай 1 - $x \not\in A, x \not\in B, x \in C$}
+Допускаме, че $x \in X$. Тогава $x \in C \cap X$, но $x \not\in (A \cup B)$, следователно $x \not\in (A \cup B) \cap C$, което е противоречие с второто уравнение от условието. Следователно $x \not\in X$. Следователно $(C \setminus (A \cup B)) \cap X = \emptyset$.
+\subsubsection*{Случай 2 - $x \not\in A, x \in B, x \not\in C$}
+Допускаме, че $x \not\in X$. Следователно $x \not\in C \cup X$, но $x \in B \setminus A$ и $x \in (B \setminus A) \cup C$, което е противоречие. Следователно $x \in X$, следователно $B \setminus (A \cup C) \subseteq X$.
+\subsubsection*{Случай 3 - $x \not\in A, x \in B, x \in C$}
+Допускаме, че $x \not\in X$. Следователно $x \not\in X \cap C$, но $x \in (A \cup B)$ и $x \in (A \cup B) \cap C$, което е противоречие. Следователно $x \in X$. Следователно $(B \cap C) \setminus A \subseteq X$.
+\subsubsection*{Случай 4 - $x \in A, x \not\in B, x \not\in C$}
+Допускаме, че $x \in X$. Тогава $x \in C \cup X$, но $x \not\in (B \setminus A)$ и $x \not\in (B \setminus A) \cup C$, което е противоречие. Следователно $x \not\in X$. Следователно $(A \setminus (B \cup C)) \cap X = \emptyset$.
+\subsubsection*{Случай 5 - $x \in A, x \not\in B, x \in C$}
+Допускаме, че $x \not\in X$. Тогава $x \not\in C \cap X$, но $x \in (A \cup B)$ и $x \in (A \cup B) \cap C$, което е противоречие. Следователно $x \in X$. Следователно $(A \cap C) \setminus B \subseteq X$.
+\subsubsection*{Случай 6 - $x \in A, x \in B, x \not\in C$}
+Допускаме, че $x \in X$. Следователно $x \in C \cup X$, но $x \not\in (B \setminus A)$ и $x \not\in (B \setminus A) \not\in C$, което е противоречие. Следователно $x \not\in X$, следователно $((A \cap B) \setminus C) \cap X = \emptyset$.
+\subsubsection*{Случай 7 - $x \in A, x \in B, x \in C$}
+Допускаме, че $x \not\in X$. Тогава $x \not\in C \cap X$, но $x \in (A \cup B)$ и $x \in (A \cup B) \cap C$, което е противоречие. Следователно $x \in X$, следователно $A \cap B \cap C \subseteq X$.
+
+\paragraph*{}
+Разглеждайки всички тези случаи и знаейки, че $X \subseteq A \cup B \cup C$, можем да заключим, че $X = (B \setminus (A \cup C)) \cup ((B \cap C) \setminus A) \cup ((A \cap C) \setminus B) \cup (A \cap B \cap C)$.
+
 \end{document}
